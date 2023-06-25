@@ -1,0 +1,61 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+```{r}
+library(tidyverse)
+library(GGally)
+```
+
+
+Developing Data Products - An evaluation of cars fuel efficiency
+=================================
+- Author: Rodolfo León
+- Date: June 25, 2023
+- Location: Lima, Perú
+
+
+About the mtcars data set
+=================================
+The "mtcars" data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). It comes as a built-in dataset in R as data frame with 32 observations and 11 variables of numeric type.
+
+The contents and the structure of the dataset are listed in the following slide.
+
+Contents and Structure of the dataset
+=================================
+- mpg	Miles/(US) gallon
+- cyl	Number of cylinders
+- disp	Displacement (cu.in.)
+- hp	Gross horsepower
+- drat	Rear axle ratio
+- wt	Weight (1000 lbs)
+- qsec	1/4 mile time
+- vs	Engine (0 = V-shaped, 1 = straight)
+- am	Transmission (0 = automatic, 1 = manual)
+- gear	Number of forward gears
+- carb	Number of carburetors
+
+***
+
+```{r echo = FALSE}
+data(mtcars)
+str(mtcars)
+```
+
+ggpairs Plot
+=================================
+```{r echo = FALSE, fig.width = 16, fig.height = 11}
+ggpairs(mtcars)
+```
+
+Documentation
+================================
+To view the analysis you may refer to:
+
+https://ijelwr-rodolfo0leon.shinyapps.io/DDP_week4_RLeon/
+
+https://github.com/rodoleon51/DDP-Final-Project
+
+- The app compares each car model's design variable against fuel efficiency.
+- On the 'Variable' dropdown menu choose the variable you want to compare.
+- If you want to see the outliers in the Boxplot, check the box.
+- When changing variables, press the 'Submit' button to see the result.
